@@ -1,0 +1,190 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 20px;
+}
+
+hr {
+    background-color: rgb(255, 216, 157);
+    height: 5px;
+    border-style: double;
+    margin: 15px 0;
+}
+
+h1 {
+    color: rgb(31, 27, 32);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.destacado {
+    font-family: "Lucida Sans", sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    background-color:rgb(31, 27, 32);
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+nav {
+    margin: 15px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: rgb(31, 27, 32);
+    text-decoration: underline;
+}
+
+h2 {
+    color: rgb(31, 27, 32);
+    margin: 20px 0;
+}
+
+.hoja {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+#portada {
+    border: 10px solid rgb(0, 0, 0);
+    border-radius: 15px;
+ 
+}
+
+/* Estilos para la página de contacto */
+
+address {
+    font-style: normal;
+    margin: 15px 0;
+}
+
+section {
+    margin: 20px 0;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 500px;
+    background-color: white;
+    border: 2px solid rgb(255, 216, 157);
+    border-radius: 12px;
+}
+
+
+
+td {
+    border: 1px solid rrgb(255, 216, 157);
+    padding: 12px;
+}
+
+th {
+    background-color:rgb(255, 216, 157);
+    color: black;
+}
+
+td img {
+    max-width: 50px;
+    height: auto;
+}
+
+td a {
+    color: black;
+    text-decoration: none;
+}
+
+td a:hover {
+    color:rgb(255, 216, 157);
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    table {
+        width: 100%;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+}
+
+
+/* Estilos para la tabla de productos */
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 700px;
+    background-color: white;
+    border: 2px solid rgb(255, 216, 157);
+}
+
+caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+}
+
+th,
+td {
+    border: 1px solid rgbrgb(255, 216, 157);
+    padding: 12px;
+}
+
+th {
+    background-color: rgb(255, 216, 157);
+    color: black;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f1e3a0;
+}
+
+tbody tr:hover {
+    background-color: hsl(59, 100%, 92%);
+}
+
+.promocion {
+    background-color:rgb(255, 216, 157);
+    font-size: 16px;
+    padding: 15px;
+}
+
+@media (max-width: 600px) {
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px 5px;
+    }
+}
+
+
+
