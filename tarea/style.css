@@ -1,0 +1,108 @@
+
+
+:root {
+  --fondo: #FAF7FF;
+  --tarjeta: #FFFFFF;
+  --borde: #E6D9F7;
+  --lila: #D8B4FE;
+  --acento: #7C3AED;
+  --acento-hover: #6D28D9;
+  --texto: #2A2140;
+  --texto-suave: #6B5E85;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+.portada {
+  text-align: center;
+  padding: 48px 20px 24px;
+}
+
+.avatar {
+  font-size: 4rem;
+  margin-bottom: 8px;
+}
+
+.portada h1 {
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.frase {
+  max-width: 480px;
+  margin: 0 auto;
+  color: var(--texto-suave);
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+main h2 {
+  text-align: center;
+  margin: 32px 0 16px;
+}
+
+.retos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.tarjeta-reto {
+  background: var(--tarjeta);
+  border: 19px solid var(--borde);
+  border-radius: 16px;
+  padding: 24px;
+  margin: 8px;
+  text-align: center;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.tarjeta-reto:hover {
+  transform: translateY(-4px);
+  border-color: var(--lila);
+}
+
+.tarjeta-reto h3 {
+  margin: 0 0 4px;
+}
+
+.sesion {
+  margin: 0 0 16px;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.tarjeta-reto a {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 999px;
+  background: var(--acento);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.tarjeta-reto a:hover {
+  background: var(--acento-hover);
+}
+
+footer {
+  text-align: center;
+  padding: 32px 20px;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
