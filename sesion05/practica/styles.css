@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+body{
+    margin: 0;
+    padding: 2rem 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(234, 164, 248);
+    color: black;
+}
+.formulario{
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 16px;
+    background-color: rgb(197, 39, 245);
+    box-shadow: 0 4px 16px rgba(0, 0, 0 , 0.12);
+}
+fieldset{
+    margin: 0 0 0 1.5rem;
+    padding: 1rem 1.25rem;
+    border: 3px solid #8855a5;
+    border-radius:  12px;
+
+}
+legend{
+    padding: 0 0.5rem;
+    font-weight: 600;
+    color: #111111 ;
+}
+.campo{
+    margin-bottom: 1rem;
+
+}
+.campo label{
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+}
+input,
+select,
+textarea{
+    width: 100%;
+    padding: 0.06rem 0.75rem;
+    border: 2px solid #eaa4f8 ;
+    border-radius: 8px;
+    font: 600;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible{
+    outline: 3px solid #8855a5;
+    outline-offset: 2px;
+    border-color:#eaa4f8;
+
+}
+
+.opcion{
+    display: inline-block;
+    margin-right: 1rem;
+}
+.opcion input{
+    width: auto;
+    margin-right: 0.35;
+}
+/* manejo de Errores */
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid{
+    border-color: #8855a5;
+    background-color: #eaa4f8;
+}
+.error{
+    display: block;
+    min-height: 1.2rem;
+    color: #8855a5;
+    font-size: 0.85rem;
+}
+.boton{
+    width: 100%;
+    padding: 0.7rem 1.2rem;
+    border: 2px solid #8855a5;
+    border-radius: 8px;
+    background-color: #eaa4f8;
+    color: black;
+    font: inherit;
+    cursor: pointer;
+}
+h1{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0 0.05rem;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+

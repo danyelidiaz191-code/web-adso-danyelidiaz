@@ -1,0 +1,132 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 2rem 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+main {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000015;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #087443;
+}
+
+fieldset {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 3px solid #bbb;
+    border-radius: 8px;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-weight: bold;
+    color: #087443;
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo > label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+select {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: white;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 0.4rem;
+    accent-color: #087443;
+}
+
+.grupo label {
+    display: inline-flex;
+    align-items: center;
+    margin: 0.5rem 0.8rem 0.5rem 0;
+}
+
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+    outline: 3px solid #087443;
+    outline-offset: 3px;
+}
+
+/* Campos inválidos después de interactuar */
+input:user-invalid,
+select:user-invalid {
+    border: 2px solid #d00000;
+}
+
+/* Clase para marcar campos inválidos desde JavaScript */
+.invalido {
+    border: 2px solid #d00000 !important;
+    background-color: #fff0f0 !important;
+}
+
+.error {
+    display: block;
+    min-height: 1rem;
+    margin-top: 0.25rem;
+    color: #d00000;
+    font-size: 0.85rem;
+}
+
+.boton {
+    display: block;
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #087443;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #055a32;
+}
+
+#resumen {
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 1rem;
+    }
+
+    .grupo label {
+        display: flex;
+    }
+}

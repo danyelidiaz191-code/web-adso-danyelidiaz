@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1>Registro de la Biblioteca</h1>
+        <form action="#" class="Formulario"  method="post">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <div class="campo">
+            <label for="Nombre">Nombre Completo</label>
+            <input type="text" id="Nombre"  name="Nombre" required>
+
+            </div>
+
+            <div class="campo">
+                <label for="documento">Documento</label>
+                <input type="text" name="documento" id="documento" required>
+            </div>
+
+            <div class="campo">
+                <label for="correo">Correo Electrónico</label>
+                <input type="email" name="correo" id="correro" required>
+            </div>
+            
+            <div class="campo">
+                <label for="nacimiento">Fecha de Nacimiento</label>
+                <input type="date" name="nacimiento" id="nacimiento" min="1900-01-01" >
+            </div>
+
+
+             <div class="campo">
+                <label for="clave">contraseña</label>
+                <input type="password" name="clave" id="clave" required  minlength="8">
+            </div>
+
+            <div class="campo">
+                <label for="edad">Edad</label>
+                <input type="number" name="edad" id="edad" min="0" max="120" required>
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Tu perfil</legend>
+            <div class="campo">
+            <label for="tipo">Tipo de Usuario</label>
+            <select name="tipo" id="tipo" required>
+                <option value="">Elige una opcion</option>
+                <option value="aprendiz">Aprendiz</option>
+                <option value="instructor">Instructor</option>
+                <option value="visitante">Visitante</option>
+            </select>
+            </div>
+            <fieldset class="grupo" >
+                <legend>Sede</legend>
+                <label for="norte" class="opcion">
+                  <input type="radio" name="Sede"  id="norte"   value="norte" checked>Norte 
+                </label>
+
+                <label for="Centro" class="opcion">
+                  <input type="radio" name="Sede"  id="centro"   value="centro">Centro 
+                </label>
+
+                <label for="sur" class="opcion">
+                  <input type="radio" name="Sede"  id="sur"   value="sur">Sur
+                </label>
+            </fieldset>
+
+            <fieldset class="grupo">
+                <legend>Temas que te interesan </legend>
+                <label for="novelas" class="opcion">
+                    <input type="checkbox" name="Temas" id="novelas" value="novelas"> Novelas
+                </label>
+                <label for="ciencia" class="opcion">
+                    <input type="checkbox" name="Temas" id="ciencia" value="ciencia"> Ciencia
+                </label>
+                <label for="tecnologia" class="opcion">
+                    <input type="checkbox" name="Temas" id="tecnologia" value="tecnologia"> Tecnología
+                </label>
+            </fieldset>
+
+            <div class="campo">
+                <label for="comentario">¿Qué libro te gistaría que tuvieramos?</label>
+                <textarea name="comentario" id="comentario" rows="4"></textarea>
+            </div>
+        
+        </fieldset>
+
+        <button type="submit" class="boton">Registrarme</button>
+        </form>     
+    </main>
+</body>
+</html>
