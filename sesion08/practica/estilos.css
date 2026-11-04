@@ -1,0 +1,191 @@
+:root {
+    --fondo: #fffbeb;
+    --superficie: #fff;
+    --texto: #1f2933;
+    --texto-suave: #52606d;
+    --acento: #b45309;
+    --acento-hover: #92400e;
+    --boton-texto: #fff;
+    --tarjeta-fondo: #fef3c7;
+    --sombra: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --radio: 12px;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--fondo);
+    color: var(--texto);
+}
+
+body.oscuro {
+    --fondo: #111827;
+    --superficie: #1f2937;
+    --texto: #e5e7eb;
+    --texto-suave: #9ca3af;
+    --acento: #fbbf24;
+    --acento-hover: #f59e0b;
+    --boton-texto: #1f2933;
+    --tarjeta-fondo: #374151;
+    --sombra: none;
+}
+
+body,
+.encabezado,
+.beneficio {
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    animation: aparecer 0.6s ease-out;
+
+}
+
+.encabezado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: var(--superficie);
+    box-shadow: var(--sombra);
+}
+
+.logo {
+    margin: 0;
+    font-weight: 600;
+
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+.menu a {
+    color: var(--acento)
+}
+
+.beneficios {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+}
+
+.beneficio {
+    padding: 1.25rem;
+    border-radius: var(--radio);
+    background-color: var(--tarjeta-fondo);
+}
+
+.hero {
+    display: grid;
+    gap: 1.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    text-align: center;
+    animation: aparecer 0.6s ease-out;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    display: block;
+    width: 300px;
+}
+
+.hero img {
+    border-radius: 16px;
+    width: 150px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 0.8rem 1.04rem;
+    border-radius: 999px;
+    background-color: var(--acento);
+    color: var(--boton-texto);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.boton:hover {
+    background-color: var(--acento-hover);
+}
+
+.boton:focus-visible {
+    outline: 3px solid var(--texto);
+    outline-offset: 3px;
+
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* Desde 768px - medida para celular*/
+
+@media (min-width:768px) {
+    .encabezado {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    .beneficios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        grid-template-columns: 1fr 1fr;
+        /* texto e imagen lado a lado */
+        align-items: center;
+        text-align: left;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (min-width:1024px) {
+    .beneficios {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
