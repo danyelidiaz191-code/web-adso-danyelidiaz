@@ -1,0 +1,105 @@
+/* ===== MOBILE FIRST =====
+   Los estilos sin media query son los del celular (1 columna,
+   menú en columna). Con min-width se agregan mejoras para
+   tableta (768px) y computador (1024px). */
+
+:root {
+  --rosado: #e75480;
+  --rosado-claro: #ffe4ec;
+  --texto: #3a2630;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--texto);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Imágenes fluidas */
+img { max-width: 100%; height: auto; display: block; }
+
+h1, h2, h3 { line-height: 1.2; }
+h2 { text-align: center; margin-bottom: 1.5rem; }
+
+/* ----- Encabezado: menú en columna (celular) ----- */
+.encabezado {
+  background: var(--rosado);
+  padding: 1rem;
+  text-align: center;
+}
+.logo { color: #fff; font-weight: 600; font-size: 1.3rem; text-decoration: none; }
+.menu { list-style: none; display: flex; flex-direction: column; gap: .5rem; margin-top: .8rem; }
+.menu a { color: #fff; text-decoration: none; }
+
+/* ----- Portada ----- */
+.portada {
+  background: var(--rosado-claro);
+  padding: 2rem 1rem;
+  display: grid;
+  gap: 1.5rem;
+  text-align: center;
+}
+.portada h1 { font-size: 1.9rem; margin-bottom: .8rem; }
+.frase { margin-bottom: 1.2rem; }
+.portada img { border-radius: 16px; margin: 0 auto; }
+
+.boton {
+  display: inline-block;
+  background: var(--rosado);
+  color: #fff;
+  padding: .8rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ----- Beneficios: 1 columna (celular) ----- */
+.beneficios, .pasos { padding: 2rem 1rem; }
+.grid-beneficios { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.beneficio {
+  background: #fff;
+  border: 2px solid var(--rosado-claro);
+  border-radius: 12px;
+  padding: 1.2rem;
+}
+.beneficio h3 { margin-bottom: .4rem; color: var(--rosado); }
+
+/* ----- Cómo pedir ----- */
+.pasos { background: var(--rosado-claro); }
+.pasos ol { max-width: 600px; margin: 0 auto; padding-left: 1.5rem; }
+.pasos li { margin-bottom: .6rem; }
+
+/* ----- Pie ----- */
+.pie { background: var(--texto); color: #fff; padding: 2rem 1rem; text-align: center; }
+.pie ul { list-style: none; }
+.pie li { margin-bottom: .4rem; overflow-wrap: anywhere; }
+.pie a { color: #ffb3c7; }
+
+/* ===== Tableta (768px en adelante) ===== */
+@media (min-width: 768px) {
+  .encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 1rem 2rem;
+  }
+  .menu { flex-direction: row; gap: 1.5rem; margin-top: 0; }   /* menú en fila */
+
+  .portada { grid-template-columns: 1fr 1fr; align-items: center; text-align: left; padding: 3rem 2rem; }
+  .portada h1 { font-size: 2.4rem; }
+
+  .grid-beneficios { grid-template-columns: repeat(2, 1fr); }  /* 2 columnas */
+}
+
+/* ===== Computador (1024px en adelante) ===== */
+@media (min-width: 1024px) {
+  .portada { padding: 4rem 6rem; }
+  .portada h1 { font-size: 3rem; }
+
+  .beneficios, .pasos { padding: 3rem 6rem; }
+  .grid-beneficios { grid-template-columns: repeat(3, 1fr); }  /* 3 columnas */
+}
