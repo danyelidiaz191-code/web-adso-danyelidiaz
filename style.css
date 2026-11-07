@@ -106,3 +106,24 @@ footer {
   color: var(--texto-suave);
   font-size: 0.9rem;
 }
+/* 
+  Mobile first es diseñar primero para la pantalla del celular y
+   después ir adaptando el diseño a pantallas más grandes. Los estilos
+   base son los del celular (1 columna) y con media queries min-width
+   se agregan mejoras para tablet y computador. Así el celular, que es
+   donde más se navega, carga lo más simple y no hay que "deshacer"
+   estilos de escritorio. */
+
+.retos {
+  display: grid;
+  grid-template-columns: 1fr;   /* celular: 1 columna */
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .retos { grid-template-columns: repeat(2, 1fr); }  /* tablet: 2 columnas */
+}
+
+@media (min-width: 1000px) {
+  .retos { grid-template-columns: repeat(3, 1fr); }  /* computador: 3 columnas */
+}
