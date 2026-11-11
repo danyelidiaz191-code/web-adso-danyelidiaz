@@ -1,0 +1,251 @@
+/* =========================================================
+   CAJÓN 1 · VARIABLES
+   Todos los valores reutilizables viven aquí.
+   ========================================================= */
+:root {
+  /* Paleta */
+  --tinta: #3a1d4d;
+  --primario: #7c3aed;
+  --secundario: #0f766e;
+  --peligro: #e11d48;
+  --aviso: #fbbf24;
+  --fondo: #fdf2ff;
+  --superficie: #ffffff;
+  --borde: #3a1d4d;
+
+  /* Tipografía */
+  --fuente-titulos: "Fredoka", "Trebuchet MS", sans-serif;
+  --fuente-texto: "Nunito", Verdana, sans-serif;
+
+  /* Espacios y formas */
+  --espacio: 1rem;
+  --radio: 16px;
+  --sombra: 4px 4px 0 var(--tinta);
+}
+
+/* =========================================================
+   CAJÓN 2 · BASE
+   Estilos de etiquetas HTML sin clases.
+   ========================================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente-texto);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--tinta);
+  background-color: var(--fondo);
+  background-image: radial-gradient(#e9c8f5 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
+}
+
+header,
+main,
+footer {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 var(--espacio);
+}
+
+header {
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--superficie);
+  border: 3px solid var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulos);
+  line-height: 1.15;
+  margin: 0 0 0.6rem;
+}
+
+h1 { font-size: clamp(2.4rem, 8vw, 3.6rem); font-weight: 700; color: var(--primario); }
+h2 { font-size: 1.8rem; font-weight: 600; }
+h3 { font-size: 1.25rem; font-weight: 500; margin-top: 1.2rem; }
+
+p { margin: 0 0 1rem; max-width: 65ch; }
+
+a { color: var(--primario); font-weight: 700; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover { background: var(--aviso); color: var(--tinta); }
+a:focus-visible { outline: 3px solid var(--tinta); outline-offset: 3px; border-radius: 4px; }
+
+small { font-size: 0.88rem; color: #5b3d70; }
+
+code {
+  background: #f3e1fb;
+  padding: 0.1rem 0.4rem;
+  border-radius: 6px;
+  font-size: 0.92em;
+}
+
+footer { padding-bottom: 2rem; }
+
+/* =========================================================
+   CAJÓN 3 · COMPONENTES
+   Piezas reutilizables: muestras, botones, alertas, insignias.
+   ========================================================= */
+
+/* Muestras de color */
+.paleta {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.muestra {
+  border-radius: var(--radio);
+  border: 3px solid var(--borde);
+  overflow: hidden;
+  background: var(--superficie);
+}
+
+.muestra-color { height: 70px; border-bottom: 3px solid var(--borde); }
+
+.muestra code {
+  display: block;
+  background: none;
+  border-radius: 0;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* Botones */
+.boton {
+  font-family: var(--fuente-titulos);
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 0.6rem 1.3rem;
+  border: 3px solid var(--borde);
+  border-radius: 999px;
+  box-shadow: var(--sombra);
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s, background-color 0.1s;
+}
+
+.boton:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--tinta); }
+.boton:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--tinta); }
+
+.boton:focus-visible {
+  outline: 4px solid var(--aviso);
+  outline-offset: 3px;
+}
+
+.boton-principal { background: var(--primario); color: #fff; }
+.boton-principal:hover { background: #6425d0; }
+
+.boton-secundario { background: var(--superficie); color: var(--tinta); }
+.boton-secundario:hover { background: #ccfbf1; }
+
+.boton-peligro { background: var(--peligro); color: #fff; }
+.boton-peligro:hover { background: #be123c; }
+
+.boton:disabled,
+.boton:disabled:hover {
+  background: #e8dcef;
+  color: #86709a;
+  border-color: #b9a3c9;
+  box-shadow: none;
+  transform: none;
+  cursor: not-allowed;
+}
+
+.fila { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+
+/* Alertas */
+.alerta {
+  padding: 0.8rem 1rem;
+  border: 3px solid var(--borde);
+  border-radius: var(--radio);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.alerta-exito { background: #c9f5ea; }
+.alerta-info { background: #e4d9ff; }
+.alerta-aviso { background: #fff0b8; }
+.alerta-error { background: #ffd3dd; }
+
+/* Insignias */
+.insignia {
+  display: inline-block;
+  padding: 0.1rem 0.8rem;
+  border: 2px solid var(--borde);
+  border-radius: 8px;
+  font-family: var(--fuente-titulos);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transform: rotate(-3deg);
+}
+
+.insignia-nuevo { background: var(--primario); color: #fff; }
+.insignia-listo { background: var(--secundario); color: #fff; }
+.insignia-urgente { background: var(--aviso); color: var(--tinta); }
+
+/* Campos de formulario */
+.campo { display: grid; gap: 0.3rem; max-width: 320px; margin-bottom: 1rem; }
+
+label { font-weight: 700; }
+
+input {
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
+  border: 3px solid var(--borde);
+  border-radius: 12px;
+  background: var(--superficie);
+}
+
+input:focus-visible { outline: 4px solid var(--aviso); outline-offset: 2px; }
+
+/* =========================================================
+   CAJÓN 4 · ESTADOS
+   Clases que se agregan o quitan según lo que pasa en la página.
+   ========================================================= */
+
+/* Cargando: círculo que gira */
+.cargando {
+  display: inline-block;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 5px solid #e4d9ff;
+  border-top-color: var(--primario);
+  border-radius: 50%;
+  animation: girar 0.9s linear infinite;
+}
+
+@keyframes girar {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cargando { animation-duration: 3s; }
+}
+
+/* Hecha: tarea terminada */
+.hecha { color: var(--secundario); text-decoration: line-through; text-decoration-thickness: 3px; font-weight: 800; }
+
+/* Error: input con problema y su mensaje */
+input.error { border-color: var(--peligro); background: #fff1f4; }
+small.error { color: #be123c; font-weight: 800; }
+
+/* Activo: botón seleccionado */
+.boton.activo { background: var(--aviso); color: var(--tinta); }
+
+/* Oculto: display:none lo saca de la página por completo */
+.oculto { display: none; }
