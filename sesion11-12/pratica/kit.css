@@ -1,0 +1,156 @@
+/* ==========================================================
+   kit.css · Fresas con crema
+   4 cajones: 1) variables  2) base  3) componentes  4) estados
+   ========================================================== */
+   
+/* ---------- 1. VARIABLES ---------- */
+:root {
+  --fresa: #d6336c;
+  --fresa-oscuro: #a61e4d;
+  --rosa-suave: #ffe0e9;
+  --crema: #fff7f2;
+  --hoja: #2f9e44;
+  --cacao: #e4659c;
+  --gris: #6b5a60;
+  --blanco: #ffffff;
+
+  --fuente: "Trebuchet MS", "Segoe UI", sans-serif;
+  --fuente-titulos: Georgia, "Times New Roman", serif;
+  --radio: 14px;
+  --sombra: 0 4px 14px rgba(166, 30, 77, 0.15);
+}
+
+/* ---------- 2. BASE ---------- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--fuente);
+  color: var(--cacao);
+  background: var(--crema);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--fuente-titulos);
+  color: var(--fresa-oscuro);
+  line-height: 1.2;
+}
+h1 { font-size: 2.4rem; margin: 0 0 .5rem; }
+h2 { font-size: 1.8rem; text-align: center; margin: 0 0 1.5rem; }
+h3 { font-size: 1.2rem; margin: .5rem 0; }
+
+p { margin: 0 0 1rem; }
+a { color: var(--fresa); }
+a:hover { color: var(--fresa-oscuro); }
+small { font-size: .8rem; color: var(--gris); }
+img { max-width: 100%; height: auto; border-radius: var(--radio); }
+
+main section { padding: 3rem 1.5rem; max-width: 1000px; margin: 0 auto; }
+
+/* ---------- 3. COMPONENTES ---------- */
+.encabezado {
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: .5rem;
+  padding: .8rem 1.5rem;
+  background: var(--blanco);
+  border-bottom: 3px solid var(--fresa);
+  position: sticky; top: 0; z-index: 10;
+}
+.logo { font-family: var(--fuente-titulos); font-size: 1.4rem; font-weight: bold; text-decoration: none; color: var(--fresa); }
+.menu { display: flex; gap: 1rem; flex-wrap: wrap; }
+.menu a { text-decoration: none; color: var(--cacao); font-weight: bold; }
+.menu a:hover { color: var(--fresa); }
+
+.portada { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+.portada-texto { flex: 1 1 280px; }
+.frase { font-size: 1.1rem; color: var(--gris); }
+.portada img { flex: 0 1 260px; }
+
+/* botones */
+.boton {
+  display: inline-block;
+  padding: .7rem 1.4rem;
+  border: 2px solid var(--fresa);
+  border-radius: 999px;
+  background: var(--fresa);
+  color: var(--blanco);
+  font: inherit; font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .2s, transform .2s;
+}
+.boton:hover { background: var(--fresa-oscuro); border-color: var(--fresa-oscuro); color: var(--blanco); transform: translateY(-2px); }
+.boton:focus-visible { outline: 3px solid var(--hoja); outline-offset: 3px; }
+.boton-secundario { background: transparent; color: var(--fresa); }
+.boton-secundario:hover { background: var(--rosa-suave); color: var(--fresa-oscuro); }
+.boton-peligro { background: #c92a2a; border-color: #c92a2a; }
+.boton-peligro:hover { background: #8f1d1d; border-color: #8f1d1d; }
+.boton:disabled { background: #d9cfd2; border-color: #d9cfd2; color: #8a7b80; cursor: not-allowed; transform: none; }
+
+/* tarjetas */
+.rejilla { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
+.tarjeta {
+  background: var(--blanco);
+  border: 1px solid var(--rosa-suave);
+  border-radius: var(--radio);
+  padding: 1.2rem;
+  box-shadow: var(--sombra);
+}
+
+/* insignias */
+.insignia { display: inline-block; padding: .15rem .7rem; border-radius: 999px; font-size: .75rem; font-weight: bold; }
+.insignia-nuevo { background: var(--hoja); color: var(--blanco); }
+.insignia-oferta { background: var(--fresa); color: var(--blanco); }
+.insignia-agotado { background: #d9cfd2; color: var(--cacao); }
+
+/* alertas */
+.alerta { padding: .8rem 1rem; border-radius: 10px; border-left: 6px solid; margin: 0 0 1rem; }
+.alerta-exito { background: #e6f6ea; border-color: var(--hoja); color: #1d5e2b; }
+.alerta-info { background: #e7f1ff; border-color: #1c7ed6; color: #174e88; }
+.alerta-aviso { background: #fff4d6; border-color: #f08c00; color: #7a4a00; }
+.alerta-error { background: #ffe3e3; border-color: #c92a2a; color: #7a1a1a; }
+
+/* pasos */
+.pedir ol { max-width: 560px; margin: 0 auto; padding-left: 1.5rem; }
+.pedir li { margin-bottom: .6rem; }
+
+/* campos */
+input, textarea {
+  width: 100%; padding: .6rem .8rem;
+  border: 2px solid var(--rosa-suave); border-radius: 10px;
+  font: inherit;
+}
+input:focus, textarea:focus { outline: none; border-color: var(--fresa); }
+
+/* pie */
+.pie { background: var(--cacao); color: var(--crema); text-align: center; padding: 2rem 1.5rem; }
+.pie h2 { color: var(--rosa-suave); margin-bottom: 1rem; }
+.pie a { color: var(--rosa-suave); }
+
+/* ---------- 4. ESTADOS ---------- */
+.cargando { position: relative; pointer-events: none; opacity: .7; }
+.cargando::after {
+  content: ""; display: inline-block; width: 1em; height: 1em; margin-left: .5em;
+  border: 2px solid currentColor; border-right-color: transparent;
+  border-radius: 50%; vertical-align: middle;
+  animation: girar .8s linear infinite;
+}
+@keyframes girar { to { transform: rotate(360deg); } }
+
+.hecha { text-decoration: line-through; color: var(--gris); }
+
+input.error { border-color: #c92a2a; background: #fff5f5; }
+small.error { color: #c92a2a; font-weight: bold; }
+
+.activo { background: var(--rosa-suave); color: var(--fresa-oscuro); }
+
+/* .oculto: esconde el elemento; se usa con JS (classList.toggle) para mostrar/ocultar */
+.oculto { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cargando::after { animation: none; }
+  .boton { transition: none; }
+}
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
+
