@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>J&Y</title>
+  <link rel="stylesheet" href="kit.css">
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <div class="topbar" id="topbar">
+    <p>Envios a todo el pais✨<span class="sep">|</span>Moda que te hace brillar✨</p>
+    <button class="topbar_close" id="cerrarBarra" aria-label="Cerrar aviso"></button>
+  </div>
+
+   <header class="header">
+    <a href="index.html" class="logo" aria-label="J&Y Boutique - Inicio">
+      <span class="logo__crown">♛</span>
+      <span class="logo__jy">J&Y</span>
+      <span class="logo__script">Boutique ♡</span>
+    </a>
+
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html" class="nav__link nav__link--active">Inicio</a>
+      <a href="#productos" class="nav__link">Tienda</a>
+      <a href="#" class="nav__link">Nosotros</a>
+      <a href="#contacto" class="nav__link">Contacto</a>
+    </nav>
+
+    <div class="header__icons">
+        <button class="icon.btn" aria-label="Buscar">🔍</button>
+        <button class="icon.btn" aria-label="Mi cuenta">👸🏽</button>
+        <button class="icon.btn" aria-label="Carrito">🛍 <span class="cart__count" id="contadorCarrito">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+        <div class="hero_content">
+            <h1 class="hero_titulo">
+                <span class="hero__jy">J&Y</span>
+                <span class="hero__script">Boutique ♡</span>
+            </h1>
+            <p class="hero__text">Viste tu esencia, resalta tu estilo ♡</p>
+            <a href="#productos" class="btn btn--dark">Comprar ahora →</a>
+        </div>
+        <p class="hero_quote">Moda <br> con actitud ♡</p>
+            </div>
+      <p class="hero__quote">Moda<br>con actitud ♡</p>
+      <img class="hero__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkTdqyJ_C4y3l4jK5RlXU2sUYBpPNauu1HV0rzfTuIsw&s=10" alt="Modelo con top negro y gafas de sol">
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section class="section" id="categorias">
+      <h2 class="section__title">Categorías ♡</h2>
+      <div class="categorias">
+        <a href="#" class="cat"><span class="cat__icon">👗</span>Vestidos</a>
+        <a href="#" class="cat"><span class="cat__icon">👚</span>Tops</a>
+        <a href="#" class="cat"><span class="cat__icon">👖</span>Jeans</a>
+        <a href="#" class="cat"><span class="cat__icon">🩳</span>Faldas</a>
+        <a href="#" class="cat"><span class="cat__icon">👕</span>Conjuntos</a>
+        <a href="#" class="cat"><span class="cat__icon">🧥</span>Chaquetas</a>
+        <a href="#" class="cat"><span class="cat__icon">👜</span>Accesorios</a>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section class="section" id="productos">
+      <h2 class="section__title">Nuestros Productos ♡</h2>
+      <div class="productos">
+
+        <article class="card">
+          <div class="card__media">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTULKgKHsOxSo6mWKe7Wslx32RAy1iKZ2mTcqEzK5jQemkhlGPnjtja37gp&s=10" alt="Vestido ajustado rojo vino">
+            <button class="fav" aria-label="Agregar a favoritos">♡</button>
+          </div>
+          <h3 class="card__name">Vestido Ajustado</h3>
+          <p class="card__price">$85.000</p>
+          <button class="btn btn--pink btn--sm agregar">🛒 Agregar al carrito</button>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVfyC4PQyNBqZdDpGUONSTZGq3VzCvWl6IlofJtCANDg&s=10" alt="Top manga larga negro">
+            <button class="fav" aria-label="Agregar a favoritos">♡</button>
+          </div>
+          <h3 class="card__name">Top Manga Larga</h3>
+          <p class="card__price">$45.000</p>
+          <button class="btn btn--pink btn--sm agregar">🛒 Agregar al carrito</button>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUvNDtRZHlpvTqlVSREkwxGWk3eDVB5JROoypxE3JmBQ&s" alt="Jeans wide leg">
+            <button class="fav" aria-label="Agregar a favoritos">♡</button>
+          </div>
+          <h3 class="card__name">Jeans Wide Leg</h3>
+          <p class="card__price">$90.000</p>
+          <button class="btn btn--pink btn--sm agregar">🛒 Agregar al carrito</button>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <img src="https://img.ltwebstatic.com/v4/j/pi/2025/08/08/f0/1754659085262bf6da319943621272f75897b2dc6a_thumbnail_750x999.jpg" alt="Conjunto elegante negro">
+            <button class="fav" aria-label="Agregar a favoritos">♡</button>
+          </div>
+          <h3 class="card__name">Conjunto Elegante</h3>
+          <p class="card__price">$95.000</p>
+          <button class="btn btn--pink btn--sm agregar">🛒 Agregar al carrito</button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SUSCRIPCIÓN -->
+    <section class="news">
+      <span class="news__gift">🎁</span>
+      <div class="news__text">
+        <p class="news__script">¡No te pierdas nuestras novedades! ♡</p>
+        <p class="news__sub">Suscríbete y recibe ofertas exclusivas ♡</p>
+      </div>
+      <form class="news__form" id="formSuscripcion">
+        <input type="email" id="correo" placeholder="Tu correo electrónico" required aria-label="Correo electrónico">
+        <button type="submit" class="btn btn--dark">Suscribirme</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contacto">
+    <div class="footer__grid">
+      <div class="footer__brand logo logo--light">
+        <span class="logo__crown">♛</span>
+        <span class="logo__jy">J&amp;Y</span>
+        <span class="logo__script">Boutique ♡</span>
+      </div>
+
+      <div class="footer__col">
+        <h4>Enlaces rápidos</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#productos">Tienda</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Síguenos</h4>
+        <div class="redes">
+          <a href="#" aria-label="TikTok">♪</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Pinterest">P</a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contáctanos</h4>
+        <p>✉️ j&amp;yboutique@gmail.com</p>
+        <p>📍 Medellín, Colombia</p>
+      </div>
+    </div>
+
+    <p class="footer__copy">✦ © 2025 J&amp;Y Boutique. Moda que te hace brillar ♡ ✦</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+    </section>
+  </main>
+</body>
+</html>
