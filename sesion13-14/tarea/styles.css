@@ -1,0 +1,48 @@
+:root {
+  --marca: #e84a7f;
+  --marca-oscuro: #c93468;
+  --marca-suave: #fff0f5;
+  --texto: #4a2a35;
+}
+
+body {
+  color: var(--texto);
+  background-color: var(--marca-suave);
+}
+
+h2, h3 {
+  color: var(--marca-oscuro);
+}
+
+a {
+  color: var(--marca-oscuro);
+}
+
+.encabezado {
+  background-color: var(--marca);
+  color: #fff;
+}
+
+.card {
+  border-color: var(--marca);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.tabla-marca thead th {
+  background-color: var(--marca-oscuro);
+  color: #fff;
+}
+
+.tabla-marca tbody th {
+  background-color: #fff;
+}
+
+.tarjeta-conclusion {
+  background-color: #fff;
+}
+
+.pie {
+  background-color: var(--marca-oscuro);
+  color: #fff;
+}

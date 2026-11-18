@@ -1,0 +1,91 @@
+:root {
+  --marca: #e84a7f;
+  --marca-oscuro: #c93468;
+  --marca-suave: #fff0f5;
+  --texto: #4a2a35;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--texto);
+}
+
+h1, h2, h3 {
+  color: var(--marca-oscuro);
+}
+
+a {
+  color: var(--marca-oscuro);
+}
+
+.fondo-suave {
+  background-color: var(--marca-suave);
+}
+
+/* Navbar */
+.navbar-marca {
+  background-color: var(--marca);
+}
+
+.navbar-marca .navbar-brand,
+.navbar-marca .nav-link {
+  color: #fff;
+  font-weight: 600;
+}
+
+.navbar-marca .nav-link:hover {
+  color: var(--marca-suave);
+}
+
+.navbar-marca .navbar-toggler {
+  border-color: #fff;
+  background-color: #fff;
+}
+
+/* Botones con variables de Bootstrap */
+.btn-marca {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--marca);
+  --bs-btn-border-color: var(--marca);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--marca-oscuro);
+  --bs-btn-hover-border-color: var(--marca-oscuro);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--marca-oscuro);
+  --bs-btn-active-border-color: var(--marca-oscuro);
+  --bs-btn-focus-shadow-rgb: 232, 74, 127;
+}
+
+.btn-marca-outline {
+  --bs-btn-color: var(--marca-oscuro);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: var(--marca);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--marca);
+  --bs-btn-hover-border-color: var(--marca);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--marca-oscuro);
+  --bs-btn-active-border-color: var(--marca-oscuro);
+  --bs-btn-focus-shadow-rgb: 232, 74, 127;
+}
+
+/* Tarjetas y formulario */
+.card {
+  border-color: var(--marca);
+  border-radius: 1rem;
+}
+
+.form-control:focus {
+  border-color: var(--marca);
+  box-shadow: 0 0 0 0.25rem rgba(232, 74, 127, 0.25);
+}
+
+/* Pie */
+.pie {
+  background-color: var(--marca-oscuro);
+  color: #fff;
+}
+
+.pie a {
+  color: #fff;
+}

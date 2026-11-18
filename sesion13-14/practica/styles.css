@@ -1,0 +1,22 @@
+/* La fuente de la marca */
+:root {
+  --bs-body-font-family: "Poppins", Arial, sans-serif;
+}
+
+/* El botón principal con los colores de la marca */
+.btn-primary {
+  --bs-btn-bg: #b45309;
+  --bs-btn-border-color: #b45309;
+  --bs-btn-hover-bg: #92400e;
+  --bs-btn-hover-border-color: #92400e;
+  --bs-btn-active-bg: #78350f;
+  --bs-btn-active-border-color: #78350f;
+  --bs-btn-focus-shadow-rgb: 180, 83, 9;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #92400e;
+  --bs-btn-border-color: #b45309;
+  --bs-btn-hover-bg: #b45309;
+  --bs-btn-hover-border-color: #b45309;
+}
